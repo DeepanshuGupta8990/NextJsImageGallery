@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        #word-container {
+            font-size: 14px;
+            font-weight: 400;
+            white-space: nowrap;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="word-container">deep</div>
+    <script>
+      function getWidthOfWord(word, fontSize, fontFamily, fontWeight) {
+  const span = document.createElement('span');
+  span.style.visibility = 'hidden';
+  span.style.position = 'absolute';
+  span.style.fontFamily = fontFamily;
+  span.style.fontWeight = fontWeight;
+  span.style.fontSize = fontSize + 'px';
+  span.innerText = word;
+  document.body.appendChild(span);
+  const width = span.offsetWidth;
+  document.body.removeChild(span);
+  return width;
+}
+
+const word = 'deepanshu ';
+const fontSize = 14;
+const fontFamily = 'Nunito Sans';
+const fontWeight = 400;
+
+const wordWidth = getWidthOfWord(word, fontSize, fontFamily, fontWeight);
+
+console.log(`Width of '${word}': ${wordWidth} pixels`);
+
+    </script>
+</body>
+</html>
