@@ -1,6 +1,6 @@
 import { UnsplashImage } from "@/modals/unsplash-image";
 import Image from "next/image";
-import styles from './TopicPage.module.css'
+import styles from './topicPage.module.css'
 import {Alert} from '@/components/bootstrap';
 import { Metadata } from "next";
 
